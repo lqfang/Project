@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:text="搜索"/>
+
+    <EditText
+        android:id="@+id/et_search_key"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/shape_toolbar_edittext_bg"
+        android:cursorVisible="false"
+        android:drawablePadding="5dp"
+        android:drawableRight="@mipmap/icon_action_clear"
+        android:hint="请输入搜索关键字"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        android:paddingRight="4dp"
+        android:textSize="12sp" />
+
+    <!--智能提示关键字列表-->
+    <ListView
+        android:id="@+id/list_search_key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/white"
+        android:divider="@color/colorB2B2B2"
+        android:dividerHeight="1px"
+        android:scrollbars="none"
+        android:visibility="gone"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorB2B2B2" />
+
+    <!--最近搜索关键字列表-->
+    <LinearLayout
+        android:id="@+id/ll_recent_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="历史搜索记录"
+            android:textColor="@color/color7c7c7c"
+            android:textSize="14sp" />
+
+        <com.lqfang.searchkeyworld.widget.NewFistListView
+            android:id="@+id/list_recent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:divider="@color/colorB2B2B2"
+            android:dividerHeight="0px" />
+
+        <TextView
+            android:id="@+id/clear_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="清空历史记录"
+            android:textSize="14dp"
+            android:textColor="@color/colorFF6600" />
+
+
+        <!--<com.lqfang.searchkeyworld.widget.tagview.TagFlowLayout-->
+            <!--xmlns:flowlayout="http://schemas.android.com/apk/res-auto"-->
+            <!--xmlns:zhy="http://schemas.android.com/apk/res-auto"-->
+            <!--android:id="@+id/recent_key"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="36dp"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_marginLeft="12dp"-->
+            <!--flowlayout:vertical_spacing="12dp"-->
+            <!--zhy:max_select="-1" />-->
+
+        </LinearLayout>
+</LinearLayout>

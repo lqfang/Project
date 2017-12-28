@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_item"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/img_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_centerVertical="true"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        android:src="@mipmap/purchase_time_icon"/>
+
+    <TextView
+        android:id="@+id/tv_historytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我们"
+        android:textSize="13sp"
+        android:layout_marginLeft="12dp"
+        android:padding="0dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/img_clock"
+        android:textColor="@color/color666666" />
+
+    <ImageView
+        android:id="@+id/single_close"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_action_clear"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/img_clock"
+        android:background="#dcdcdc" />
+
+</RelativeLayout>
